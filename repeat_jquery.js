@@ -13,7 +13,7 @@
     $element.hide();
     $element.fadeIn(500, function(){ $(this).hide(); });
 })(jQuery);*/
-
+//
 (function($) {
     $(function() {
         let $element = $("#fadeInIcon");
