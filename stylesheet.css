@@ -83,15 +83,31 @@ body {
   width: 1439px;
   background-color: #000000;
   font-family: "Josefin Sans", sans-serif;
+  line-height: 30px;
+  color: #fff;
 }
 
 .topImage {
   width: 100%;
   height: 835px;
-  background: url("./image/header-image.jpg") no-repeat;
-  background-size: contain;
+  background: url("./image/shutterstock_1109624759-min.jpg") no-repeat;
+  background-size: cover;
   display: block;
   position: relative;
+}
+
+.topImage .topText {
+  padding-top: 400px;
+  padding-right: 200px;
+}
+
+.topImage .topText h1 {
+  opacity: 0.5;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: right;
+  font-style: oblique;
+  font-weight: normal;
 }
 
 .topImage .scroll {
@@ -102,9 +118,20 @@ body {
 }
 
 .topImage .scroll p {
-  color: white;
   font-size: 12px;
   letter-spacing: 2px;
+  position: relative;
+  top: 0;
+}
+
+.topImage .scroll .icon {
+  width: 15px;
+  margin: 0 auto;
+}
+
+.topImage .scroll .icon span {
+  color: #fff;
+  font-size: 15px;
 }
 
 .header-wrapper {
@@ -119,8 +146,7 @@ body {
 .header-wrapper .name h2 {
   font-size: 40px;
   text-align: center;
-  color: #fff;
-  opacity: 0.8;
+  letter-spacing: 3px;
 }
 
 .header-wrapper .menu-wrapper {
@@ -145,5 +171,211 @@ body {
   opacity: 1;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+.header-wrapper .menu-wrapper .btn .corrent {
+  color: red;
+  font-weight: bold;
+}
+
+.header-wrapper .menu-wrapper .btn .corrent:hover {
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.introduction {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.introduction__head {
+  width: 50%;
+}
+
+.introduction__head h2 {
+  font-weight: normal;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 5px;
+  letter-spacing: 2px;
+  font-style: oblique;
+  font-size: 20px;
+}
+
+.introduction__head h2 span {
+  color: red;
+  font-size: 30px;
+}
+
+.introduction__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px 0;
+}
+
+.introduction__main--profileImage {
+  margin-right: 30px;
+}
+
+.introduction__main--profileImage img {
+  width: 300px;
+  height: 300px;
+  margin-top: 20px;
+}
+
+.introduction__main--contents {
+  margin-top: 10px;
+}
+
+.introduction__main--contents p {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.introduction__interval {
+  margin-bottom: 100px;
+  padding-top: 100px;
+}
+
+.introduction__interval p {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.introduction__sub--title {
+  width: 50%;
+}
+
+.introduction__sub--title h2 {
+  font-weight: normal;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 5px;
+  letter-spacing: 2px;
+  font-style: oblique;
+  font-size: 20px;
+}
+
+.introduction__sub--title h2 span {
+  color: red;
+  font-size: 30px;
+}
+
+.introduction__sub--skill {
+  margin: 30px 0 100px 0;
+  background-color: rgba(175, 175, 175, 0.1);
+}
+
+.introduction__sub--skill .skillContainer {
+  margin: 0px 30px;
+}
+
+.introduction__sub--skill .skillContainer h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding-top: 20px;
+}
+
+.introduction__sub--skill .skillContainer p {
+  font-size: 15px;
+  opacity: 0.9;
+  opacity: 0.7;
+  line-height: 20px;
+}
+
+.introduction__sub--skill .skillContainer p a {
+  color: yellow;
+}
+
+.introduction__sub2 {
+  margin-top: 30px;
+  margin-bottom: 200px;
+}
+
+.introduction__sub2--title {
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+.introduction__sub2--title h2 {
+  font-weight: normal;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 5px;
+  letter-spacing: 2px;
+  font-style: oblique;
+  font-size: 20px;
+}
+
+.introduction__sub2--title h2 span {
+  color: red;
+  font-size: 30px;
+}
+
+.introduction__sub2--text {
+  opacity: 0.9;
+}
+
+.goToTop {
+  width: 100%;
+}
+
+.goToTop__icon {
+  width: 20px;
+  margin: 30px auto;
+}
+
+.goToTop__icon a {
+  font-size: 30px;
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.goToTop__icon a:hover {
+  opacity: 1;
+}
+
+.foot {
+  border-top: 1px solid rgba(175, 175, 175, 0.2);
+}
+
+.foot__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.foot__menu .btn a {
+  padding: 20px 60px;
+  display: block;
+  text-decoration: none;
+  color: white;
+  opacity: 0.7;
+}
+
+.foot__menu .btn a:hover {
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.foot__menu .btn .corrent {
+  color: red;
+  font-weight: bold;
+}
+
+.foot__menu .btn .corrent:hover {
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.foot__copyright p {
+  text-align: center;
+  font-size: 12px;
+  padding-bottom: 30px;
 }
 /*# sourceMappingURL=stylesheet.css.map */
