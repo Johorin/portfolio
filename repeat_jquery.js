@@ -22,7 +22,7 @@
                 $element.fadeIn(700);
             });
         }, 100);
-    });    
+    });
 })(jQuery);
 
 /*(function($) {
