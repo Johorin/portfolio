@@ -20,25 +20,79 @@ body {
     width: 1439px;
     background-color: #000000;
     font-family: "Josefin Sans", sans-serif;
+    line-height: 30px;
+    color: #fff;
 }
 
 .topImage {
     width: 100%;
     //height: 789px;
     height: 835px;
-    background: url("./image/header-image.jpg") no-repeat;
-    background-size: contain;
+    background: url("./image/shutterstock_1109624759-min.jpg") no-repeat;
+    background-size: cover;
     display: block;
     position: relative;
+    .topText {
+        padding-top: 400px;
+        padding-right: 200px;
+        h1 {
+            opacity: 0.5;
+            font-size: 20px;
+            line-height: 50px;
+            text-align: right;
+            font-style: oblique;
+            font-weight: normal;
+        }
+    }
     .scroll {
         padding: 60px;
         position: absolute;
         bottom: 0;
         left: 620px;
         p {
-            color: white;
             font-size: 12px;
             letter-spacing: 2px;
+            position: relative;
+            top: 0;
+        }
+        .icon {
+            width: 15px;
+            margin: 0 auto;
+            span {
+                color: #fff;
+                font-size: 15px;
+                //text-transform: uppercase;
+                //top: -2px;
+                //transform: translateY(10px);
+                //transition-delay: 0s;
+                //transition-duration: 0.5s;
+                //transition-timing-function: ease;
+            }
+        }
+    }
+}
+
+@mixin btnMenu {
+    .btn {
+        a {
+            padding: 20px 60px;
+            display: block;
+            text-decoration: none;
+            color: white;
+            opacity: 0.7;
+            //font-weight: bold;
+            &:hover {
+                opacity: 1;
+                transition: 0.3s;
+            }
+        }
+        .corrent {
+            color: red;
+            font-weight: bold;
+            &:hover {
+                opacity: 1;
+                transition: 0.3s;
+            }
         }
     }
 }
@@ -52,8 +106,9 @@ body {
         h2 {
             font-size: 40px;
             text-align: center;
-            color: #fff;
-            opacity: 0.8;
+            //color: #fff;
+            //opacity: 0.8;
+            letter-spacing: 3px;
         }
     }
     .menu-wrapper {
@@ -61,19 +116,142 @@ body {
         //height: 60px;
         display: flex;
         justify-content: center;
-        .btn {
-            a {
-                padding: 20px 60px;
-                display: block;
-                text-decoration: none;
-                color: white;
-                opacity: 0.7;
-                //font-weight: bold;
-                &:hover {
-                    opacity: 1;
-                    transition: 0.3s;
+        @include btnMenu;
+    }
+}
+
+@mixin title-style {
+    //color: white;
+    font-weight: normal;
+    //text-decoration: underline;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+    letter-spacing: 2px;
+    font-style: oblique;
+    font-size: 20px;
+    span {
+        color: red;
+        font-size: 30px;
+    }
+}
+
+@mixin main-text {
+    //color: #fff;
+    font-size: 15px;
+    opacity: 0.9;
+    //letter-spacing: 1px;
+}
+
+.introduction {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50px;
+    &__head {
+        width: 50%;
+        h2 {
+            @include title-style;
+        }
+    }
+    &__main {
+        display: flex;
+        margin: 30px 0;
+        &--profileImage {
+            margin-right: 30px;
+            img {
+                width: 300px;
+                height: 300px;
+                margin-top: 20px;
+            }
+        }
+        &--contents {
+            //width: 700px;
+            margin-top: 10px;
+            p {
+                @include main-text;
+            }
+        }
+    }
+    &__interval {
+        margin-bottom: 100px;
+        padding-top: 100px;
+        p {
+            @include main-text;
+        }
+    }
+    &__sub {
+        &--title {
+            width: 50%;
+            h2 {
+                @include title-style;
+            }
+        }
+        &--skill {
+            margin: 30px 0 100px 0;
+            background-color: rgba(175, 175, 175, 0.1);
+            .skillContainer {
+                margin: 0px 30px;
+                h3 {
+                    //font-weight: normal;
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                    padding-top: 20px;
+                }
+                p {
+                    @include main-text;
+                    opacity: 0.7;
+                    line-height: 20px;
+                    a {
+                        color: yellow;
+                    }
                 }
             }
         }
     }
+    &__sub2 {
+        margin-top: 30px;
+        margin-bottom: 200px;
+        &--title {
+            width: 50%;
+            margin-bottom: 30px;
+            h2 {
+                @include title-style;
+            }
+        }
+        &--text {
+            opacity: 0.9;
+        }
+    }
 }
+
+.goToTop {
+    width: 100%;
+    &__icon {
+        width: 20px;
+        margin: 30px auto;
+        a {
+            font-size: 30px;
+            color: #ffffff;
+            opacity: 0.8;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.foot {
+    border-top: 1px solid rgba(175, 175, 175, 0.2);
+    &__menu {
+        display: flex;
+        justify-content: center;
+        @include btnMenu;
+    }
+    &__copyright {
+        p {
+            text-align: center;
+            font-size: 12px;
+            padding-bottom: 30px;
+        }
+    }
+}
+
