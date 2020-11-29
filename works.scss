@@ -1,0 +1,108 @@
+.topImage {
+    background: url('./image/shutterstock_1109624759-min.jpg') no-repeat;
+    background-size: cover;
+    .topText {
+        padding-left: 200px;
+        padding-top: 450px;
+        h1 {
+            text-align: left;
+        }
+    }
+}
+
+@mixin title-style {
+    //color: white;
+    font-weight: normal;
+    //text-decoration: underline;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+    letter-spacing: 2px;
+    font-style: oblique;
+    font-size: 20px;
+    span {
+        color: red;
+        font-size: 30px;
+    }
+}
+
+.works-wrapper {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.reproduct {
+    &__head {
+        width: 50%;
+        margin-bottom: 50px;
+        h2 {
+            @include title-style;
+        }
+    }
+    &__complainText {
+        margin-bottom: 50px;
+    }
+    &__name {
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+    &__wrapper {
+        background-color: black;
+        margin-bottom: 100px;
+        height: 400px;
+        position: relative;
+        &--content {
+            width: 800px;
+            height: 300px;
+            margin: 0 auto;
+            padding-top: 30px;
+        }
+        &--comment {
+            position: absolute;
+            //bottom: 25px;
+            right: 100px;
+            a {
+                color: yellow;
+            }
+        }
+    }
+}
+
+.blog {
+    padding-bottom: 100px;
+    &__head {
+        width: 50%;
+        margin-bottom: 50px;
+        h2 {
+            @include title-style;
+        }
+    }
+    &__name {
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+    &__wrapper {
+        background-color: black;
+        margin-bottom: 100px;
+        height: 400px;
+        position: relative;
+        &--content {
+            width: 800px;
+            height: 300px;
+            margin: 0 auto;
+            padding-top: 30px;
+        }
+        &--comment {
+            position: absolute;
+            //bottom: 25px;
+            right: 100px;
+            a {
+                color: yellow;
+            }
+        }
+        &--complain {
+            margin-left: 100px;
+            margin-top: 50px;
+        }
+    }
+}

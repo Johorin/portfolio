@@ -1,0 +1,39 @@
+.topImage {
+  height: 480px;
+  background: url("./image/shutterstock_1092195200-min.jpg") no-repeat;
+  background-size: contain;
+}
+
+.header-wrapper .menu-wrapper {
+  position: relative;
+  left: 15px;
+}
+
+.contact {
+  width: 70%;
+  margin: 60px auto;
+}
+
+.contact .address {
+  background-color: rgba(175, 175, 175, 0.2);
+  width: 250px;
+  height: 50px;
+  margin: 30px auto;
+}
+
+.contact .address p {
+  font-style: oblique;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.goToTop__icon {
+  position: relative;
+  left: 5px;
+}
+
+.foot__menu {
+  position: relative;
+  left: 15px;
+}
+/*# sourceMappingURL=contact.css.map */

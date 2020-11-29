@@ -1,0 +1,533 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+}
+
+html {
+  font-family: Georgia, 游明朝, YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
+}
+
+body {
+  margin: 0 200px;
+  margin-bottom: 65px;
+}
+
+header {
+  margin-top: 50px;
+  margin-bottom: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+}
+
+.title {
+  margin-top: 7px;
+  padding: 0 75px 10px 0;
+  width: 260px;
+}
+
+.title a {
+  font-size: 36px;
+  font-weight: bold;
+  color: #111111;
+  text-decoration: none;
+}
+
+.title p {
+  font-size: 18px;
+  color: #777777;
+}
+
+/* -------------------- */
+/* ▼メニューバーの装飾（★の部分は必須、他は自由に調整可） */
+/* -------------------- */
+ul.ddmenu {
+  margin: 0px;
+  /* メニューバー外側の余白(ゼロ) */
+  padding: 0px;
+}
+
+/* -------------------------- */
+/* ▼メインメニュー項目の装飾 */
+/* -------------------------- */
+ul.ddmenu li {
+  display: inline-block;
+  /* ★横並びに配置する */
+  list-style-type: none;
+  /* ★リストの先頭記号を消す */
+  position: relative;
+  /* ★サブメニュー表示の基準位置にする */
+}
+
+ul.ddmenu a {
+  color: #444444;
+  /* メニュー項目の文字色(白色) */
+  line-height: 40px;
+  /* メニュー項目のリンクの高さ(40px) */
+  text-align: center;
+  /* メインメニューの文字列の配置(中央寄せ) */
+  text-decoration: none;
+  /* メニュー項目の装飾(下線を消す) */
+  font-weight: bold;
+  /* 太字にする */
+  display: block;
+  /* ★項目内全域をリンク可能にする */
+  font-weight: normal;
+  margin-right: 35px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+ul.ddmenu a span {
+  margin-left: 15px;
+}
+
+ul.ddmenu a:hover {
+  color: #c49029;
+}
+
+/* ---------------------------------- */
+/* ▼サブメニューがある場合に開く処理 */
+/* ※サブメニューが1階層しか存在しない場合の記述 */
+/* ---------------------------------- */
+ul.ddmenu li:hover ul {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+/* -------------------- */
+/* ▼サブメニューの装飾 */
+/* -------------------- */
+ul.ddmenu ul {
+  margin: 0px;
+  /* ★サブメニュー外側の余白(ゼロ) */
+  padding: 0px;
+  /* ★サブメニュー内側の余白(ゼロ) */
+  opacity: 0;
+  position: absolute;
+  /* ★絶対配置にする */
+  top: 40px;
+  left: -15px;
+}
+
+/* ------------------------ */
+/* ▼サブメニュー項目の装飾 */
+/* ------------------------ */
+ul.ddmenu ul li {
+  width: 135px;
+  /* サブメニュー1項目の横幅(135px) */
+}
+
+ul.ddmenu ul li a {
+  background-color: #fff;
+  width: 178px;
+  margin: 0;
+  padding: 14px 16px;
+  line-height: 25px;
+  text-align: left;
+  /* 文字列の配置(左寄せ) */
+  font-weight: normal;
+  /* 太字にはしない */
+  border: 1px solid #f0f0f0;
+  -webkit-box-shadow: 0 1px 3px #ddd;
+          box-shadow: 0 1px 3px #ddd;
+}
+
+ul.ddmenu ul li a:hover {
+  color: #c49029;
+}
+
+.search-wrapper {
+  width: 180px;
+  height: 40px;
+  position: relative;
+  /*height: 40px;
+    //display: inline-block;
+    //float: right;
+    //margin: 0 0 0 auto;
+    position: relative;*/
+}
+
+.search-wrapper .search-window {
+  width: 0;
+  background: url("./images/search_01@3x.png") left center no-repeat;
+  background-size: 26px 26px;
+  padding-left: 30px;
+  border: none;
+  outline: none;
+  line-height: 34px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  /*height: 34px;
+        width: 0;
+        background: url(./images/search_01@3x.png) left center no-repeat;
+        background-size: 26px 26px;
+        background-color: #fff;
+        padding-left: 30px;
+        font-size: 16px;
+        border: 1px solid #e0e0e0;
+        position: absolute;
+        right: 0;*/
+}
+
+.search-wrapper .search-window:focus {
+  /*width: 185px;
+            border: 1px solid #f0f0f0;
+            position: absolute;
+            top: 3px;
+            left: -180px;
+            transition: 0.5s;*/
+  width: 190px;
+  height: 34px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  cursor: text;
+}
+
+/* placeholderの色変更 */
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: black;
+  opacity: 0.5;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: black;
+  opacity: 0.5;
+}
+
+/*一応これだけ書いとけば適用される*/
+::-webkit-input-placeholder {
+  /* Others */
+  color: black;
+  opacity: 0.5;
+  font-family: Georgia, 游明朝, YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
+}
+:-ms-input-placeholder {
+  /* Others */
+  color: black;
+  opacity: 0.5;
+  font-family: Georgia, 游明朝, YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
+}
+::-ms-input-placeholder {
+  /* Others */
+  color: black;
+  opacity: 0.5;
+  font-family: Georgia, 游明朝, YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
+}
+::placeholder {
+  /* Others */
+  color: black;
+  opacity: 0.5;
+  font-family: Georgia, 游明朝, YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
+}
+
+/* placeholderの大きさ変更 */
+input, textarea {
+  font-size: 16px;
+}
+
+.bigImage {
+  margin-bottom: 90px;
+}
+
+.text1 h1 {
+  font-weight: normal;
+  font-size: 27px;
+  color: #333;
+  opacity: 0.7;
+  padding-bottom: 25px;
+  margin-bottom: 90px;
+}
+
+.post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 86px;
+}
+
+.date p {
+  width: 338px;
+}
+
+.date p a {
+  text-decoration: none;
+  color: #999999;
+  font-size: 16.884px;
+}
+
+.posting .title {
+  margin-top: -8px;
+  margin-bottom: 28px;
+  padding: 0;
+  width: 690px;
+}
+
+.posting .title a {
+  color: #111111;
+  font-size: 22.4px;
+  line-height: 100%;
+}
+
+.posting .title a:hover {
+  color: #c49029;
+}
+
+.posting .text p {
+  color: #666666;
+  font-size: 16.884px;
+  line-height: 30.3912px;
+}
+
+.page {
+  position: relative;
+  left: -53px;
+  text-align: center;
+  margin-bottom: 107px;
+}
+
+.page .btn {
+  display: inline-block;
+}
+
+.page .btn a {
+  border: 1px solid rgba(204, 204, 204, 0.7);
+  padding: 13.5px 18px;
+  margin-right: 6px;
+  height: 30px;
+  width: 8.28125px;
+  font-size: 16.884px;
+  text-decoration: none;
+  color: #777777;
+}
+
+.page .btn a:hover {
+  border: 1px solid #cccccc;
+  color: #333333;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.page .current a {
+  color: #333333;
+  font-weight: bold;
+  background-color: #EEEEEE;
+  cursor: text;
+}
+
+.foot {
+  border-top: 1px solid #e6e6e6;
+  padding: 75px 0 90px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.foot .comments {
+  font-size: 16.884px;
+  color: #666666;
+  line-height: 28.7028px;
+}
+
+.container1 {
+  display: inline-block;
+  min-width: 260px;
+  padding-right: 75px;
+}
+
+.container1 .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.container1 .profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 18px;
+}
+
+.container1 .profile h3 {
+  color: #333333;
+  font-size: 18.9945px;
+  line-height: 32.2907px;
+  margin-top: 20px;
+  margin-left: 4px;
+}
+
+.container1 .profile .icon {
+  position: relative;
+  left: 7px;
+}
+
+.container2 {
+  min-width: 213px;
+  margin-right: 21px;
+}
+
+.container2 .title {
+  margin-bottom: 30px;
+  width: 213px;
+  padding: 0;
+}
+
+.container2 .title h4 {
+  font-size: 14.4px;
+  font-weight: 700;
+  letter-spacing: 0.72px;
+  color: #333333;
+}
+
+.container2 .comments {
+  font-size: 16px;
+  line-height: 27px;
+}
+
+.contanier3 {
+  min-width: 193px;
+  margin: 0 21px 0 19px;
+}
+
+.contanier3 .title {
+  margin-bottom: 30px;
+  padding: 0;
+  width: 193px;
+}
+
+.contanier3 .title h4 {
+  font-size: 14.4px;
+  font-weight: 700;
+  line-height: 20.16px;
+  letter-spacing: 0.72px;
+  color: #333333;
+}
+
+.contanier3 .min-post {
+  margin-bottom: 14px;
+}
+
+.contanier3 .min-post .date p {
+  color: #999999;
+  font-size: 14.6384px;
+}
+
+.theme {
+  margin-bottom: 10px;
+}
+
+.theme a {
+  text-decoration: none;
+  color: #666666;
+  border-bottom: 1px solid #dddddd;
+  font-size: 16.884px;
+}
+
+.theme a:hover {
+  color: #c49029;
+}
+
+.container4 .title {
+  margin-bottom: 30px;
+  padding: 0;
+  width: 213px;
+}
+
+.container4 .title h4 {
+  font-size: 14.4px;
+  font-weight: 700;
+  line-height: 20.16px;
+  letter-spacing: 0.72px;
+  color: #333333;
+}
+
+.container4 .theme {
+  height: 28px;
+  margin-bottom: 14px;
+}
+
+.mini-search {
+  margin-top: 75px;
+}
+
+.mini-search .search-window {
+  width: 191.739px;
+  height: 18.989px;
+  padding: 10.13px;
+  border: 1px solid #e6e6e6;
+  outline-offset: -2px;
+}
+
+.end-wrapper {
+  border-top: 1px solid #dddddd;
+  padding-top: 60px;
+}
+
+.end-wrapper .icon {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-size: 22px;
+}
+
+.end-wrapper .icon .fab {
+  margin-right: 22px;
+}
+
+.end-wrapper .site-credit {
+  text-align: center;
+  position: relative;
+  top: -24px;
+  left: 15px;
+}
+
+.end-wrapper .site-credit p {
+  color: #999999;
+}
+
+.end-wrapper .site-credit a {
+  color: #666666;
+  text-decoration: none;
+}
+
+.end-wrapper .site-credit a:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.icon {
+  color: #999999;
+  font-size: 20px;
+  margin-top: 4px;
+}
+
+.icon .fab {
+  margin-right: 12px;
+}
+
+.icon .fab:hover {
+  color: #646464;
+  cursor: pointer;
+}
+/*# sourceMappingURL=stylesheet.css.map */

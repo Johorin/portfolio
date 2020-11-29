@@ -28,18 +28,27 @@ body {
     width: 100%;
     //height: 789px;
     height: 835px;
-    background: url("./image/shutterstock_1109624759-min.jpg") no-repeat;
+    background: url("./image/shutterstock_1413836129-min.jpg") no-repeat;
     background-size: cover;
     display: block;
     position: relative;
     .topText {
-        padding-top: 400px;
-        padding-right: 200px;
+        padding-top: 160px;
+        padding-left: 120px;
         h1 {
+            span {
+                font-size: 80px;
+                color: #000;
+                letter-spacing: 5px;
+                font-weight: bold;
+                //padding-top: 150px;
+                //padding-left: 150px;
+                line-height: 100px;
+            }
             opacity: 0.5;
             font-size: 20px;
             line-height: 50px;
-            text-align: right;
+            text-align: left;
             font-style: oblique;
             font-weight: normal;
         }
@@ -109,6 +118,13 @@ body {
             //color: #fff;
             //opacity: 0.8;
             letter-spacing: 3px;
+        }
+        p {
+            font-size: 20px;
+            text-align: center;
+            opacity: 0.5;
+            letter-spacing: 1px;
+            margin-top: 20px;
         }
     }
     .menu-wrapper {
@@ -186,7 +202,9 @@ body {
             }
         }
         &--skill {
-            margin: 30px 0 100px 0;
+            //margin: 30px 0 100px 0;
+            margin-top: 60px;
+            padding-bottom: 30px;
             background-color: rgba(175, 175, 175, 0.1);
             .skillContainer {
                 margin: 0px 30px;

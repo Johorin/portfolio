@@ -90,24 +90,32 @@ body {
 .topImage {
   width: 100%;
   height: 835px;
-  background: url("./image/shutterstock_1109624759-min.jpg") no-repeat;
+  background: url("./image/shutterstock_1413836129-min.jpg") no-repeat;
   background-size: cover;
   display: block;
   position: relative;
 }
 
 .topImage .topText {
-  padding-top: 400px;
-  padding-right: 200px;
+  padding-top: 160px;
+  padding-left: 120px;
 }
 
 .topImage .topText h1 {
   opacity: 0.5;
   font-size: 20px;
   line-height: 50px;
-  text-align: right;
+  text-align: left;
   font-style: oblique;
   font-weight: normal;
+}
+
+.topImage .topText h1 span {
+  font-size: 80px;
+  color: #000;
+  letter-spacing: 5px;
+  font-weight: bold;
+  line-height: 100px;
 }
 
 .topImage .scroll {
@@ -147,6 +155,14 @@ body {
   font-size: 40px;
   text-align: center;
   letter-spacing: 3px;
+}
+
+.header-wrapper .name p {
+  font-size: 20px;
+  text-align: center;
+  opacity: 0.5;
+  letter-spacing: 1px;
+  margin-top: 20px;
 }
 
 .header-wrapper .menu-wrapper {
@@ -263,7 +279,8 @@ body {
 }
 
 .introduction__sub--skill {
-  margin: 30px 0 100px 0;
+  margin-top: 60px;
+  padding-bottom: 30px;
   background-color: rgba(175, 175, 175, 0.1);
 }
 

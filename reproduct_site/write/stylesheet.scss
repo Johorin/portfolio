@@ -1,0 +1,435 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+}
+html {
+    font-family: Georgia, 游明朝, YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
+}
+body {
+    margin: 0 200px;
+    margin-bottom: 65px;
+}
+header {
+    //height: 151px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    display: flex;
+    position: relative;
+}
+li {
+    list-style: none;
+}
+header .container {
+    display: flex;
+    margin-top: 40px;
+}
+.title {
+    margin-top: 7px;
+    padding: 0 75px 10px 0;
+    width: 260px;
+    a {
+        font-size: 36px;
+        font-weight: bold;
+        color: #111111;
+        text-decoration: none;
+    }
+    p {
+        font-size: 18px;
+        color: #777777;
+    }
+}
+/* -------------------- */
+/* ▼メニューバーの装飾（★の部分は必須、他は自由に調整可） */
+/* -------------------- */
+ul.ddmenu {
+    margin: 0px;               /* メニューバー外側の余白(ゼロ) */
+    padding: 0px;
+ }
+ 
+ /* -------------------------- */
+ /* ▼メインメニュー項目の装飾 */
+ /* -------------------------- */
+ ul.ddmenu li {
+    display: inline-block; /* ★横並びに配置する */
+    list-style-type: none; /* ★リストの先頭記号を消す */
+    position: relative;    /* ★サブメニュー表示の基準位置にする */
+ }
+ ul.ddmenu a {
+    color: #444444;              /* メニュー項目の文字色(白色) */
+    line-height: 40px;         /* メニュー項目のリンクの高さ(40px) */
+    text-align: center;        /* メインメニューの文字列の配置(中央寄せ) */
+    text-decoration: none;     /* メニュー項目の装飾(下線を消す) */
+    font-weight: bold;         /* 太字にする */
+    display: block;            /* ★項目内全域をリンク可能にする */
+    font-weight: normal;
+    margin-right: 35px;
+    //line-height: 100%;  //こう指定すると文字の高さに合わせてくれる。
+    transition: 0.3s;
+    //box-sizing: border-box;
+    span {
+        margin-left: 15px;
+    }
+ }
+ ul.ddmenu a:hover {
+    color: #c49029;
+ }
+ 
+ /* ---------------------------------- */
+ /* ▼サブメニューがある場合に開く処理 */   /* ※サブメニューが1階層しか存在しない場合の記述 */
+ /* ---------------------------------- */
+ ul.ddmenu li:hover ul {
+    //display: block;      /* ★マウスポインタが載っている項目の内部にあるリストを表示する */
+    opacity: 1;
+    transition: opacity 0.5s;
+ }
+ 
+ /* -------------------- */
+ /* ▼サブメニューの装飾 */
+ /* -------------------- */
+ ul.ddmenu ul {
+    margin: 0px;         /* ★サブメニュー外側の余白(ゼロ) */
+    padding: 0px;        /* ★サブメニュー内側の余白(ゼロ) */
+    //display: none;       /* ★標準では非表示にする */
+    opacity: 0;
+    position: absolute;  /* ★絶対配置にする */
+    top: 40px;
+    //bottom: 40px;
+    left: -15px;
+ }
+ 
+ /* ------------------------ */
+ /* ▼サブメニュー項目の装飾 */
+ /* ------------------------ */
+ ul.ddmenu ul li {
+    width: 135px;               /* サブメニュー1項目の横幅(135px) */
+ }
+ ul.ddmenu ul li a {
+    //color: #444444;
+    background-color: #fff;
+    width: 178px;
+    margin: 0;
+    padding: 14px 16px;
+    line-height: 25px;
+    //line-height: 35px;     /* サブメニュー1項目の高さ(35px) */
+    text-align: left;      /* 文字列の配置(左寄せ) */
+    font-weight: normal;   /* 太字にはしない */
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 1px 3px #ddd;
+ }
+ ul.ddmenu ul li a:hover {
+    color: #c49029;
+ }
+ .search-wrapper {
+    width: 180px;
+    height: 40px;
+    //float: right;
+    position: relative;
+
+    /*height: 40px;
+    //display: inline-block;
+    //float: right;
+    //margin: 0 0 0 auto;
+    position: relative;*/
+    .search-window {
+        //margin: 0 0 0 140px;
+        width: 0;
+        background: url("./images/search_01@3x.png") left center no-repeat;
+        background-size: 26px 26px;
+        padding-left: 30px;
+        border: none;
+        outline: none;
+        line-height: 34px;
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+        transition: 0.5s;
+    
+        /*height: 34px;
+        width: 0;
+        background: url(./images/search_01@3x.png) left center no-repeat;
+        background-size: 26px 26px;
+        background-color: #fff;
+        padding-left: 30px;
+        font-size: 16px;
+        border: 1px solid #e0e0e0;
+        position: absolute;
+        right: 0;*/
+        &:focus {
+            /*width: 185px;
+            border: 1px solid #f0f0f0;
+            position: absolute;
+            top: 3px;
+            left: -180px;
+            transition: 0.5s;*/
+    
+            width: 190px;
+            height: 34px;
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            cursor: text;
+        }
+    }
+ }
+/* placeholderの色変更 */
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: black;
+    opacity: 0.5;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: black;
+    opacity: 0.5;
+}
+/*一応これだけ書いとけば適用される*/
+::placeholder{ /* Others */
+    color: black;
+    opacity: 0.5;
+    font-family: Georgia, 游明朝, YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
+}
+/* placeholderの大きさ変更 */
+input, textarea {
+    font-size: 16px;
+}
+.bigImage {
+    margin-bottom: 90px;
+}
+.text1 h1 {
+    font-weight: normal;
+    font-size: 27px;
+    color: #333;
+    opacity: 0.7;
+    padding-bottom: 25px;
+    margin-bottom: 90px;
+}
+.post {
+    display: flex;
+    margin-bottom: 86px;
+}
+.date {
+    //padding-right: 75px;
+    p {
+        width: 338px;
+        a {
+            text-decoration: none;
+            color: #999999;
+            font-size: 16.884px;
+        }
+    }
+}
+.posting {
+    .title {
+        margin-top: -8px;
+        margin-bottom: 28px;
+        padding: 0;
+        width: 690px;
+        a {
+            color: rgb(17, 17, 17);
+            font-size: 22.4px;
+            line-height: 100%;
+            &:hover {
+                color: #c49029;
+            }
+        }
+    }
+    .text p {
+        color: rgb(102, 102, 102);
+        font-size: 16.884px;
+        line-height: 30.3912px;
+    }
+}
+.page {
+    position: relative;
+    left: -53px;
+    text-align: center;
+    margin-bottom: 107px;
+    .btn {
+        display: inline-block;
+        a {
+            border: 1px solid rgba(204, 204, 204, 0.7);
+            padding: 13.5px 18px;
+            margin-right: 6px;
+            height: 30px;
+            width: 8.28125px;
+            font-size: 16.884px;
+            //text-size-adjust: 100%;
+            text-decoration: none;
+            color: rgb(119, 119, 119);
+            &:hover {
+                border: 1px solid rgba(204, 204, 204, 1);
+                color: rgb(51, 51, 51);
+                transition: 0.3s;
+            }
+        }
+    }
+    .current {
+        a {
+            color: rgb(51, 51, 51);
+            font-weight: bold;
+            background-color: #EEEEEE;
+            cursor: text;
+        }
+    }
+}
+.foot {
+    border-top: 1px solid rgb(230, 230, 230);
+    padding: 75px 0 90px 0;
+    display: flex;
+    .comments {
+        font-size: 16.884px;
+        color: rgb(102, 102, 102);
+        line-height: 28.7028px;
+    }
+}
+.container1 {
+    display: inline-block;
+    min-width: 260px;
+    padding-right: 75px;
+    .profile {
+        display: flex;
+        margin-bottom: 20px;
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 18px;
+        }
+        h3 {
+            color: rgb(51, 51, 51);
+            font-size: 18.9945px;
+            line-height: 32.2907px;
+            margin-top: 20px;
+            margin-left: 4px;
+        }
+        .icon {
+            position: relative;
+            left: 7px;
+        }
+    }
+}
+.container2 {
+    min-width: 213px;
+    margin-right: 21px;
+    .title {
+        margin-bottom: 30px;
+        width: 213px;
+        padding: 0;
+        h4 {
+            font-size: 14.4px;
+            font-weight: 700;
+            letter-spacing: 0.72px;
+            color: rgb(51, 51, 51);
+        }
+    }
+    .comments {
+        //font-weight: 400;
+        font-size: 16px;
+        line-height: 27px;
+    }
+}
+.contanier3 {
+    min-width: 193px;
+    margin: 0 21px 0 19px;
+    .title {
+        margin-bottom: 30px;
+        padding: 0;
+        width: 193px;
+        h4 {
+            font-size: 14.4px;
+            font-weight: 700;
+            line-height: 20.16px;
+            letter-spacing: 0.72px;
+            color: rgb(51, 51, 51);
+        }
+    }
+    .min-post {
+        margin-bottom: 14px;
+        .date p {
+            color: #999999;
+            font-size: 14.6384px;
+        }
+    }
+}
+.theme {
+    margin-bottom: 10px;
+    a {
+        text-decoration: none;
+        color: rgb(102, 102, 102);
+        border-bottom: 1px solid rgb(221, 221, 221);
+        font-size: 16.884px;
+        &:hover {
+            color: #c49029;
+        }
+    }
+}
+.container4 {
+    .title {
+        margin-bottom: 30px;
+        padding: 0;
+        width: 213px;
+        h4 {
+            font-size: 14.4px;
+            font-weight: 700;
+            line-height: 20.16px;
+            letter-spacing: 0.72px;
+            color: rgb(51, 51, 51);
+        }
+    }
+    .theme {
+        height: 28px;
+        margin-bottom: 14px;
+    }
+}
+.mini-search {
+    margin-top: 75px;
+    .search-window {
+        width: 191.739px;
+        height: 18.989px;
+        padding: 10.13px;
+        border: 1px solid rgb(230, 230, 230);
+        outline-offset: -2px;
+    }
+}
+.end-wrapper {
+    border-top: 1px solid rgb(221, 221, 221);
+    padding-top: 60px;
+    .icon {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        font-size: 22px;
+        .fab {
+            margin-right: 22px;
+        }
+    }
+    .site-credit {
+        text-align: center;
+        position: relative;
+        top: -24px;
+        left: 15px;
+        p {
+            color: #999999;
+        }
+        a {
+            color: #666666;
+            text-decoration: none;
+            &:hover {
+                color: #000;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.icon {
+    color: rgb(153, 153, 153);
+    font-size: 20px;
+    margin-top: 4px;
+    .fab {
+        margin-right: 12px;
+        &:hover {
+            color: rgb(100, 100, 100);
+            cursor: pointer;
+        }
+    }
+}

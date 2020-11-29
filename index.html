@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <title>My Portfolio</title>
+    <title>YUYA HOJO</title>
 </head>
 <body>
     <div class="topImage" id="fadeInImage">
         <div class="topText">
-            <h1>
+            <h1 id="fadeInText"><span>
+                ようこそ、<br>
+                私の<br>
+                ポートフォリオサイトへ<br></span>
                 Welcome to my portfolio site.<br>
                 My name is Yuya Hojo.<br>
                 I'm majoring in infomation engineering at Utsunomiya University.<br>
@@ -30,6 +33,7 @@
     <div class="header-wrapper">
         <div class="name">
             <h2>Yuya Hojo's Portfolio</h2>
+            <p>北條佑弥のポートフォリオ</p>
         </div>
         <div class="menu-wrapper">
             <div class="btn">
@@ -47,7 +51,7 @@
 <main>
 <div class="introduction">
     <div class="introduction__head">
-        <h2><span>I</span>ntroduction</h2>
+        <h2><span>P</span>rofile</h2>
     </div>
     <div class="introduction__main">
         <div class="introduction__main--profileImage">
@@ -55,10 +59,12 @@
         </div>
         <div class="introduction__main--contents">
             <p>
-                名前：北條　佑弥　生年月日：1999年4月12日生まれ<br><br>
-                栃木県にて生まれる。大学に入学するまで両親や祖母の願いもあり地元で生活していたが、都会での生活への憧れがあるため、将来的に一度は首都近辺に住んでみたいと本人は思っている。
+                名前：北條　佑弥　生年月日：1999年4月12日生まれ<br>
+                趣味：アニメ観賞、ゲーム、テニス<br>
+                好きなもの：唐揚げ、スパゲッティー、Apple製品<br><br>
+                栃木県にて生まれる。大学に入学するまで両親や祖母の願いもあり地元で生活していたが、都会での生活への憧れがあるため、将来的に一度は首都近辺に住んでみたいと本人は思っている。<br>
                 高校は栃木県立宇都宮北高等学校を卒業後、国立大学法人宇都宮大学工学部情報工学科に在学中。<br>
-                いつしか適当に過ごして遊んでばかりの生活をしていたが、大学3年の4月、youtubeにてあるエンジニアのチャンネルの動画をみて、WEB業界やプログラミングの仕事に興味を抱き始め、
+                いつしか適当に過ごして遊んでばかりの生活をしていたが、大学3年の4月、youtubeにてあるエンジニアのチャンネルの動画をきっかけにWEB業界やプログラミングの仕事に興味を抱き始め、
                 それを機にプログラミングの独学を始める。<br>
                 なんとなく興味が湧いて購入した参考書等は最後までやり遂げた試しが今までなかったが、目標ができてからは参考書も最後までやり遂げられるようになったし、取り組んでいた学習が終わってからも発展的な内容やアウトプットも根気強く長く続けられるようになった。<br>
                 目標ができれば自分はこんなに出来ることを知った。
@@ -128,9 +134,9 @@
                 <p>
                     ある程度サイトの模写ができるようになってきたので、WordPressも参考書
                     （<a href="https://www.amazon.co.jp/%E3%81%84%E3%81%A1%E3%81%B0%E3%82%93%E3%82%84%E3%81%95%E3%81%97%E3%81%84-WordPress-%E5%85%A5%E9%96%80%E6%95%99%E5%AE%A4-%E4%BD%90%E3%80%85%E6%9C%A8-%E6%81%B5/dp/4800712653/ref=sr_1_7?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&dchild=1&keywords=WordPress&qid=1606263720&s=books&sr=1-7">いちばんやさしい WordPress 入門教室</a>）
-                    を購入し、サーバーのレンタル、独自ドメインを取得するところからレンタ
-                    ルサーバーにWordPressを埋め込んで学習を開始した。この参考書では、
-                    サイト運営に関する細やかな情報が記載されており、私が以前知らなかった
+                    を購入し、サーバーのレンタル、独自ドメインを取得し、レンタルサーバー
+                    にWordPressを埋め込むところから実際に私のブログを作成しながら学習を開始した。
+                    この参考書では、サイト運営に関する細やかな情報が記載されており、私が以前知らなかった
                     webサイトにおけるセキュリティに対する理解を深めることができた。私は
                     以前から、検索してもなかなかヒットしないような難しい大学の授業で困って
                     いる大学生に向けて、学習の助けになるブログ型のサイトを作りたいと思っていた。
@@ -142,15 +148,25 @@
             </div>
             <div class="skillContainer">
                 <h3>Git</h3>
-                <p></p>
+                <p>
+                    Progateで基礎を学び、実際に本ポートフォリオサイトはGitを使用したGitHub Pagesを用いて
+                    オンラインに公開している。ローカルリポジトリへのファイルの追加、コミット、ローカルリポジトリの
+                    ファイルをリモートリポジトリへプッシュ、くらいはできる。
+                </p>
             </div>
             <div class="skillContainer">
                 <h3>C言語</h3>
-                <p></p>
+                <p>
+                    情報系の学科に所属しているので大学1年当初から学び始める。それからC言語はよく使っているので
+                    コードの書き方は一通り理解している。
+                </p>
             </div>
             <div class="skillContainer">
                 <h3>C++</h3>
-                <p></p>
+                <p>
+                    大学2年の後期より学び始める。オブジェクト指向やカプセル化、ポリモーフィズムやモジュール化
+                    について初めて学んだ。C言語の延長上ほどの知識くらいしか学んでいないが、以降はJavaScriptの学習の助けに繋がった。
+                </p>
             </div>
         </div>
     </div>

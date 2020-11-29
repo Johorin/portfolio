@@ -1,0 +1,127 @@
+.topImage {
+  background: url("./image/shutterstock_1109624759-min.jpg") no-repeat;
+  background-size: cover;
+}
+
+.topImage .topText {
+  padding-left: 200px;
+  padding-top: 450px;
+}
+
+.topImage .topText h1 {
+  text-align: left;
+}
+
+.works-wrapper {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.reproduct__head {
+  width: 50%;
+  margin-bottom: 50px;
+}
+
+.reproduct__head h2 {
+  font-weight: normal;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 5px;
+  letter-spacing: 2px;
+  font-style: oblique;
+  font-size: 20px;
+}
+
+.reproduct__head h2 span {
+  color: red;
+  font-size: 30px;
+}
+
+.reproduct__complainText {
+  margin-bottom: 50px;
+}
+
+.reproduct__name {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.reproduct__wrapper {
+  background-color: black;
+  margin-bottom: 100px;
+  height: 400px;
+  position: relative;
+}
+
+.reproduct__wrapper--content {
+  width: 800px;
+  height: 300px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.reproduct__wrapper--comment {
+  position: absolute;
+  right: 100px;
+}
+
+.reproduct__wrapper--comment a {
+  color: yellow;
+}
+
+.blog {
+  padding-bottom: 100px;
+}
+
+.blog__head {
+  width: 50%;
+  margin-bottom: 50px;
+}
+
+.blog__head h2 {
+  font-weight: normal;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 5px;
+  letter-spacing: 2px;
+  font-style: oblique;
+  font-size: 20px;
+}
+
+.blog__head h2 span {
+  color: red;
+  font-size: 30px;
+}
+
+.blog__name {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.blog__wrapper {
+  background-color: black;
+  margin-bottom: 100px;
+  height: 400px;
+  position: relative;
+}
+
+.blog__wrapper--content {
+  width: 800px;
+  height: 300px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.blog__wrapper--comment {
+  position: absolute;
+  right: 100px;
+}
+
+.blog__wrapper--comment a {
+  color: yellow;
+}
+
+.blog__wrapper--complain {
+  margin-left: 100px;
+  margin-top: 50px;
+}
+/*# sourceMappingURL=works.css.map */
